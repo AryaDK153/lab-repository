@@ -1,0 +1,59 @@
+/* by tag */
+h1 {
+    color: #fca205;
+    font-family: "Monospace";
+    font-style: italic;
+}
+
+/* by id */
+#header {
+    background-color: #f0f0f0;
+    margin-top: 0;
+    padding: 20px 20px 20px 40px;
+}
+
+/* by class */
+.content_section {
+    background-color: #3696e1;
+    margin-bottom: 30px;
+    color: #000000;
+    font-family: cursive;
+    padding: 20px 20px 20px 40px;
+}
+
+
+/*
+Usage Example:
+<html>
+  <head>
+    <title>Tutorial CSS Yay</title>
+    <link rel="stylesheet" href="{% static 'css/tutorial.css' %}" />
+    {% comment %} loads css file {% endcomment %}
+  </head>
+  <body>
+    <div id="header">{% comment %} style based on ID (header) {% endcomment %}
+      <h1>Tutorial CSS Yeyyaaa</h1>
+    </div>
+    <div>
+      <h1>Tutorial CSS Yay</h1>{% comment %} style based on tag (h1) {% endcomment %}
+    </div>
+    <div id="main">
+      <div>
+        <p>published: 04 Oktober 2021</p>
+        <h1><a href="">Tutorial CSS ku</a></h1>{% comment %} this one is a hyperlink, link goes in href {% endcomment %}
+        <p>Yay ini tutorial yang gampang!</p>
+      </div>
+      <div class="content_section">{% comment %} style based on class (content_section) {% endcomment %}
+        <p class="date ">published: 29 September 2022</p>
+        <h2><a href="">Tutorial CSS mu</a></h2>
+        <p id="content_2">Yay ini tutorial yang mudah!</p>
+      </div>
+      <div class="content_section">{% comment %} style based on class (content_section) {% endcomment %}
+        <p>published: 30 September 2022</p>
+        <h2><a href="">Tutorial CSS semua</a></h2>
+        <p id="content_3">Yay ini tutorial yang tidak sulit!</p>
+      </div>
+    </div>
+  </body>
+</html>
+*/
