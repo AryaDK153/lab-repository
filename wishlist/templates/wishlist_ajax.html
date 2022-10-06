@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block meta %}
+<title>AJAX</title>
+
+
+<div id="wl"></div>
+<script>
+    $(document).ready(function() {
+        $.get("{% url 'wishlist:show_wishlist_json' %}", function(data) {
+            $.each(data, function(key, value) {
+                $('#wl').append('<tr bgcolor="white">' + 
+                    '<th>' + value.fields.nama_barang + '</th>' +
+                    '<th>' + value.fields.harga_barang + '</th>' +
+                    '<th>' + value.fields.deskripsi + '</th>' +
+                '</tr>');
+            })
+        })
+    })
+</script>
+{% endblock %}
+
+{% block content %}
+{% endblock content %}

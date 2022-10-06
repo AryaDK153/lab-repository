@@ -68,9 +68,12 @@ def show_wishlist(request):
     }
     return render(request, "wishlist.html", context)
 
+# Access-Limited Wishlist Page
+def show_wishlist_ajax(request):
+    return render(request, "wishlist_ajax.html")
 
-
-
+def submit_wishlist_ajax(request):
+    return
 
 
 # # LAB 01: Create your views here.
